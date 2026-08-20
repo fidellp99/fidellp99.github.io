@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clube de Línguas — Escolha a forma de pagamento</title>
+<meta name="description" content="Escolha como prefere pagar a sua mensalidade: Cartão, M-Pesa ou eMola.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/png" href="https://clinguas.com/oficial.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:        #161B33;
+    --navy-light:  #232A4D;
+    --navy-line:   #343C68;
+    --cream:       #F7F2E7;
+    --muted:       #9BA3C4;
+    --amber:       #E8A33D;
+    --amber-dim:   #6B5327;
+    --teal:        #52C4B0;
+
+    --display: 'Fraunces', serif;
+    --body: 'Work Sans', sans-serif;
+    --mono: 'Space Mono', monospace;
+  }
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  body{
+    min-height:100vh;
+    display:flex; flex-direction:column; align-items:center; justify-content:center;
+    background:
+      radial-gradient(ellipse at 78% -10%, rgba(232,163,61,.16), transparent 55%),
+      radial-gradient(ellipse at 0% 100%, rgba(82,196,176,.10), transparent 45%),
+      var(--navy);
+    color:var(--cream);
+    font-family:var(--body);
+    padding:48px 20px;
+  }
+
+  .logo-wrap{ margin-bottom:36px; display:flex; flex-direction:column; align-items:center; gap:14px; }
+  .logo-img{
+    width:76px; height:76px; border-radius:50%;
+    object-fit:cover; border:2px solid var(--navy-line);
+  }
+  .logo-text{ font-family:var(--display); font-weight:600; font-size:22px; letter-spacing:-.01em; }
+  .logo-text span{ color:var(--amber); }
+
+  .intro{ text-align:center; margin-bottom:40px; max-width:360px; }
+  .intro h1{ font-family:var(--display); font-size:24px; font-weight:600; margin-bottom:8px; }
+  .intro p{ font-size:14.5px; color:var(--muted); }
+
+  .options{
+    width:100%; max-width:400px;
+    display:flex; flex-direction:column; gap:14px;
+    margin-bottom:44px;
+  }
+  .option{
+    display:flex; align-items:center; gap:18px;
+    background:var(--navy-light);
+    border:1px solid var(--navy-line);
+    border-radius:16px;
+    padding:20px 22px;
+    transition:transform .18s ease, border-color .18s ease, box-shadow .18s ease;
+  }
+  .option:hover{
+    transform:translateY(-2px);
+    border-color:var(--amber);
+    box-shadow:0 12px 28px -12px rgba(232,163,61,.35);
+  }
+  .option-icon{
+    width:46px; height:46px; border-radius:12px;
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-weight:700; font-size:13px;
+    flex-shrink:0;
+  }
+  .icon-cartao{ background:white; color:var(--teal);}
+  .icon-cartao img{width:40px;}
+  .icon-mpesa{ background:white; color:var(--amber); }
+  .icon-mpesa img{width:40px;}
+  .icon-emola{ background:#f37227; color:var(--amber); }
+  .icon-emola img{width:40px;}
+
+  .option-text{ flex:1; }
+  .option-text .name{ font-size:16.5px; font-weight:600; color:var(--cream); }
+  .option-text .desc{ font-size:12.5px; color:var(--muted); margin-top:2px; }
+  .option-arrow{ font-family:var(--mono); color:var(--muted); font-size:18px; }
+
+  .whatsapp-box{
+    text-align:center; font-size:13.5px; color:var(--muted);
+    border-top:1px solid var(--navy-line); padding-top:28px; width:100%; max-width:400px;
+  }
+    a {text-decoration: none;}
+  .whatsapp-box a{
+    display:inline-flex; align-items:center; gap:8px;
+    color:#25D366; font-weight:600; font-family:var(--mono); font-size:13.5px;
+    margin-top:8px; text-decoration:none;
+  }
+  .whatsapp-box a:hover{ color:var(--amber); }
+
+  .note{
+    font-family:var(--mono); font-size:11px; color:var(--amber-dim);
+    background:rgba(232,163,61,.08); border:1px dashed var(--amber);
+    border-radius:8px; padding:8px 12px; margin-top:24px; text-align:center; max-width:400px;
+  }
+</style>
+</head>
+<body>
+
+  <div class="logo-wrap">
+    <img src="https://clinguas.com/oficial.png" alt="Clube de Línguas" class="logo-img">
+    <div class="logo-text">Clube de <span>Línguas</span></div>
+  </div>
+
+  <div class="intro">
+    <h1>Escolha a forma de pagamento</h1>
+    <p>Selecione uma opção abaixo para concluir o pagamento da sua mensalidade.</p>
+  </div>
+
+  <div class="options">
+    <!-- CARTÃO -->
+    <a class="option" href="https://debitopay.com/l/aulas-de-ingles-online-pagar-c-1x0g" target="_blank" rel="noopener">
+      <div class="option-icon icon-cartao"><img src="Visa_Inc._logo_(2005–2014).png"></div>
+      <div class="option-text">
+        <div class="name">Cartão</div>
+        <div class="desc">Visa, Mastercard e outros</div>
+      </div>
+      <div class="option-arrow">→</div>
+    </a>
+
+    <!-- M-PESA -->
+    <a class="option" href="https://debitopay.com/l/aulas-de-ingles-online-pagar-c-d8ht" target="_blank" rel="noopener">
+      <div class="option-icon icon-mpesa"><img src="M-pesa-logo.png"/></div>
+      <div class="option-text">
+        <div class="name">M-Pesa</div>
+        <div class="desc">Pagamento via M-Pesa</div>
+      </div>
+      <div class="option-arrow">→</div>
+    </a>
+
+    <!-- EMOLA -->
+    <a class="option" href="https://checkout.payzeno.io/l/pl_wym1hoe5" target="_blank" rel="noopener">
+      <div class="option-icon icon-emola"><img src="emola.png"/></div>
+      <div class="option-text">
+        <div class="name">eMola</div>
+        <div class="desc">Pagamento via eMola</div>
+      </div>
+      <div class="option-arrow">→</div>
+    </a>
+  </div>
+
+  <div class="whatsapp-box">
+    Dúvidas com o pagamento?
+    <br>
+    <a href="https://wa.me/258846861051" target="_blank" rel="noopener">
+      WhatsApp +258 84 686 1051
+    </a>
+  </div>
+
+</body>
+</html>
