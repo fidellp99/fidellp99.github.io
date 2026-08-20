@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Clube de Línguas — Aulas de Inglês Online (Mockup)</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     DESIGN TOKENS
+     Tema: "Depois do expediente" — céu de fim de tarde/noite,
+     luz quente de candeeiro de estudo. Reflete o maior diferencial
+     do curso: você escolhe a sua hora, mesmo às 23h.
+     ============================================================ */
+  :root{
+    --navy:        #161B33;   /* fundo principal — céu noturno */
+    --navy-light:  #232A4D;   /* cartões sobre fundo escuro */
+    --navy-line:   #343C68;   /* divisórias sobre fundo escuro */
+    --cream:       #F7F2E7;   /* fundo claro / texto sobre navy */
+    --cream-dim:   #EDE6D6;   /* fundo secundário claro */
+    --ink:         #14182B;   /* texto sobre fundo claro */
+    --muted:       #9BA3C4;   /* texto secundário sobre navy */
+    --muted-ink:   #5B5F73;   /* texto secundário sobre cream */
+    --amber:       #E8A33D;   /* acento primário — luz de candeeiro */
+    --amber-dim:   #6B5327;
+    --teal:        #52C4B0;   /* acento secundário — progresso/frescor */
+
+    --display: 'Fraunces', serif;
+    --body: 'Work Sans', sans-serif;
+    --mono: 'Space Mono', monospace;
+  }
+
+  *{ box-sizing:border-box; margin:0; padding:0; }
+  html{ scroll-behavior:smooth; }
+  body{
+    font-family:var(--body);
+    background:var(--cream);
+    color:var(--ink);
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  img, svg{ display:block; max-width:100%; }
+  a{ color:inherit; text-decoration:none; }
+  ul{ list-style:none; }
+
+  .wrap{
+    max-width:1120px;
+    margin:0 auto;
+    padding:0 28px;
+  }
+  section{ padding:96px 0; }
+  @media (max-width:720px){ section{ padding:64px 0; } }
+
+  h1,h2,h3,h4{ font-family:var(--display); font-weight:600; line-height:1.08; letter-spacing:-0.01em; }
+  .eyebrow{
+    font-family:var(--mono);
+    font-size:12.5px;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--amber);
+    display:flex; align-items:center; gap:10px;
+    margin-bottom:18px;
+  }
+  .eyebrow::before{ content:''; width:22px; height:1px; background:var(--amber); display:inline-block; }
+
+  .btn{
+    display:inline-flex; align-items:center; justify-content:center; gap:8px;
+    font-family:var(--body); font-weight:600; font-size:15.5px;
+    padding:15px 30px; border-radius:100px;
+    border:1px solid transparent; cursor:pointer;
+    transition:transform .18s ease, box-shadow .18s ease;
+  }
+  .btn:hover{ transform:translateY(-2px); }
+  .btn-primary{ background:var(--amber); color:var(--navy); box-shadow:0 8px 24px -8px rgba(232,163,61,.55); }
+  .btn-primary:hover{ box-shadow:0 12px 28px -8px rgba(232,163,61,.7); }
+  .btn-ghost-dark{ background:transparent; border-color:rgba(247,242,231,.35); color:var(--cream); }
+  .btn-ghost-dark:hover{ border-color:var(--cream); }
+  .btn-ghost-light{ background:transparent; border-color:rgba(20,24,43,.25); color:var(--ink); }
+  .btn-ghost-light:hover{ border-color:var(--ink); }
+
+  /* ============================================================
+     NAV
+     ============================================================ */
+  header.nav{
+    position:sticky; top:0; z-index:50;
+    background:rgba(22,27,51,.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--navy-line);
+  }
+  header.nav .wrap{
+    display:flex; align-items:center; justify-content:space-between;
+    padding-top:18px; padding-bottom:18px;
+  }
+  .logo{ font-family:var(--display); font-size:20px; vertical-align: middle; display: inline-block; font-weight:700; color:var(--cream); letter-spacing:-.01em; }
+  .logo img{
+  width: 80px;
+  height: 80px;
+  display: inline-block;
+  vertical-align: middle;
+  }
+  .logo span{ color:var(--amber); }
+  .nav-links{ display:flex; gap:32px; font-size:14.5px; color:var(--muted); }
+  @media (max-width:720px){ .nav-links{ display:none; } }
+  .nav-cta{ font-size:14px; padding:11px 22px; }
+
+  /* ============================================================
+     HERO
+     ============================================================ */
+  .hero{
+    background:
+      radial-gradient(ellipse at 78% -10%, rgba(232,163,61,.20), transparent 55%),
+      radial-gradient(ellipse at 0% 100%, rgba(82,196,176,.12), transparent 45%),
+      var(--navy);
+    color:var(--cream);
+    padding-top:88px; padding-bottom:88px;
+  }
+  .hero .wrap{
+    display:grid; grid-template-columns:1.1fr .9fr; gap:56px; align-items:center;
+  }
+  @media (max-width:900px){ .hero .wrap{ grid-template-columns:1fr; } }
+  .hero h1{
+    font-size:clamp(34px, 5vw, 54px);
+    color:var(--cream);
+    margin-bottom:22px;
+  }
+  .hero h1 em{ font-style:italic; color:var(--amber); }
+  .hero p.lede{
+    font-size:18px; color:var(--muted); max-width:46ch; margin-bottom:34px;
+  }
+  .hero-ctas{ display:flex; gap:14px; flex-wrap:wrap; margin-bottom:28px; }
+  .hero-microcopy{ font-family:var(--mono); font-size:12.5px; color:var(--muted); }
+
+  /* signature element: dial */
+  .dial-card{
+    background:var(--navy-light);
+    border:1px solid var(--navy-line);
+    border-radius:24px;
+    padding:32px;
+    text-align:center;
+  }
+  .dial-card .dial-label{
+    font-family:var(--mono); font-size:12px; letter-spacing:.1em; text-transform:uppercase;
+    color:var(--muted); margin-bottom:20px;
+  }
+  .dial{ width:100%; max-width:280px; margin:0 auto; }
+  .dial-caption{ margin-top:20px; font-size:14.5px; color:var(--cream); }
+  .dial-caption strong{ color:var(--amber); }
+
+  /* ============================================================
+     PROBLEM
+     ============================================================ */
+  .problem{ background:var(--cream); }
+  .problem .intro{ max-width:60ch; margin-bottom:48px; }
+  .problem h2{ font-size:clamp(26px,3.4vw,38px); margin-bottom:18px; }
+  .problem .intro p{ color:var(--muted-ink); font-size:17px; }
+  .problem-grid{ display:grid; grid-template-columns:repeat(2,1fr); gap:18px; }
+  @media (max-width:720px){ .problem-grid{ grid-template-columns:1fr; } }
+  .problem-item{
+    background:var(--cream-dim);
+    border:1px solid rgba(20,24,43,.08);
+    border-radius:16px;
+    padding:24px 26px;
+    font-size:15.5px;
+    color:var(--ink);
+    display:flex; gap:14px;
+  }
+  .problem-item .mark{ font-family:var(--display); font-size:22px; color:var(--amber); flex-shrink:0; line-height:1; }
+
+  /* ============================================================
+     SOLUTION + SELF-SELECT
+     ============================================================ */
+  .solution{ background:var(--navy); color:var(--cream); }
+  .solution .wrap{ display:grid; grid-template-columns:1fr 1fr; gap:64px; }
+  @media (max-width:900px){ .solution .wrap{ grid-template-columns:1fr; } }
+  .solution h2{ color:var(--cream); font-size:clamp(26px,3.2vw,36px); margin-bottom:20px; }
+  .solution .pitch{ font-size:17px; color:var(--muted); margin-bottom:16px; }
+  .solution .pitch strong{ color:var(--cream); }
+  .select-list{ display:flex; flex-direction:column; gap:16px; }
+  .select-item{
+    display:flex; gap:14px; align-items:flex-start;
+    padding:18px 20px; background:var(--navy-light); border:1px solid var(--navy-line); border-radius:14px;
+  }
+  .select-item .check{
+    width:22px; height:22px; border-radius:50%; background:var(--teal); color:var(--navy);
+    display:flex; align-items:center; justify-content:center; font-size:13px; font-weight:700; flex-shrink:0; margin-top:1px;
+  }
+  .select-item p{ font-size:15px; color:var(--cream); }
+  .select-title{ font-family:var(--mono); font-size:11.5px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin-bottom:14px; }
+
+  /* ============================================================
+     PRODUCT / HOW IT WORKS
+     ============================================================ */
+  .product{ background:var(--cream); }
+  .product h2{ font-size:clamp(26px,3.2vw,36px); margin-bottom:14px; }
+  .product .intro{ max-width:56ch; color:var(--muted-ink); font-size:17px; margin-bottom:52px; }
+  .steps{ display:grid; grid-template-columns:repeat(5,1fr); gap:16px; margin-bottom:56px; }
+  @media (max-width:900px){ .steps{ grid-template-columns:repeat(2,1fr); } }
+  @media (max-width:520px){ .steps{ grid-template-columns:1fr; } }
+  .step{ background:#fff; border:1px solid rgba(20,24,43,.08); border-radius:16px; padding:22px 20px; }
+  .step .num{ font-family:var(--mono); font-size:13px; color:var(--amber-dim); background:rgba(232,163,61,.15); width:30px; height:30px; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:14px; }
+  .step h4{ font-size:15.5px; font-weight:600; font-family:var(--body); margin-bottom:6px; }
+  .step p{ font-size:13.5px; color:var(--muted-ink); }
+
+  .pull-quote{
+    background:var(--navy); color:var(--cream);
+    border-radius:20px; padding:44px 40px;
+    display:grid; grid-template-columns:auto 1fr; gap:24px; align-items:center;
+  }
+  @media (max-width:600px){ .pull-quote{ grid-template-columns:1fr; } }
+  .pull-quote .quote-mark{ font-family:var(--display); font-size:56px; color:var(--amber); line-height:1; }
+  .pull-quote p{ font-family:var(--display); font-size:20px; font-style:italic; line-height:1.4; margin-bottom:12px; }
+  .pull-quote cite{ font-family:var(--mono); font-size:12.5px; color:var(--muted); font-style:normal; }
+
+  /* ============================================================
+     CREDIBILITY
+     ============================================================ */
+  .credibility{ background:var(--cream-dim); }
+  .cred-card{ display:grid; grid-template-columns:220px 1fr; gap:44px; align-items:center; }
+  @media (max-width:720px){ .cred-card{ grid-template-columns:1fr; } }
+  .cred-photo, .cred-photo img{
+    width:220px; height:220px; border-radius:20px;
+    background:repeating-linear-gradient(135deg, var(--navy-light), var(--navy-light) 10px, var(--navy) 10px, var(--navy) 20px);
+    display:flex; align-items:center; justify-content:center;
+    font-family:var(--mono); font-size:11.5px; color:var(--muted); text-align:center; padding:2px;
+    border:0px solid var(--navy-line);
+  }
+  .cred-card h3{ font-size:26px; margin-bottom:6px; }
+  .cred-card .role{ font-family:var(--mono); font-size:12.5px; color:var(--amber-dim); text-transform:uppercase; letter-spacing:.08em; margin-bottom:16px; }
+  .cred-card p{ font-size:15.5px; color:var(--muted-ink); max-width:58ch; }
+  .cred-tags{ display:flex; gap:10px; flex-wrap:wrap; margin-top:18px; }
+  .cred-tag{ font-family:var(--mono); font-size:11.5px; padding:6px 12px; border-radius:100px; background:#fff; border:1px solid rgba(20,24,43,.12); color:var(--muted-ink); }
+
+  /* ============================================================
+     RESULTS / TESTIMONIALS
+     ============================================================ */
+  .results{ background:var(--navy); color:var(--cream); }
+  .results h2{ color:var(--cream); font-size:clamp(26px,3.2vw,36px); margin-bottom:44px; }
+  .stat-grid{ display:grid; grid-template-columns:repeat(6,1fr); gap:14px; margin-bottom:56px; }
+  @media (max-width:900px){ .stat-grid{ grid-template-columns:repeat(3,1fr); } }
+  @media (max-width:520px){ .stat-grid{ grid-template-columns:repeat(2,1fr); } }
+  .stat{ background:var(--navy-light); border:1px solid var(--navy-line); border-radius:14px; padding:20px 14px; text-align:center; }
+  .stat .n{ font-family:var(--mono); font-size:22px; color:var(--amber); font-weight:700; }
+  .stat .l{ font-size:11.5px; color:var(--muted); margin-top:6px; line-height:1.3; }
+
+  .testi-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+  @media (max-width:900px){ .testi-grid{ grid-template-columns:1fr; } }
+  .testi{ background:var(--navy-light); border:1px solid var(--navy-line); border-radius:16px; padding:26px; }
+  .testi p{ font-size:14.5px; color:var(--cream); margin-bottom:16px; }
+  .testi cite{ font-family:var(--mono); font-size:11.5px; color:var(--muted); font-style:normal; }
+
+  /* ============================================================
+     PRICING
+     ============================================================ */
+  .pricing{ background:var(--cream); }
+  .price-card{
+    max-width:560px; margin:0 auto;
+    background:#fff; border:1px solid rgba(20,24,43,.1); border-radius:24px;
+    padding:44px; text-align:center;
+    box-shadow:0 30px 60px -30px rgba(20,24,43,.2);
+  }
+  .price-card .eyebrow{ justify-content:center; }
+  .price-card .eyebrow::before{ display:none; }
+  .price-amount{ font-family:var(--display); font-size:52px; font-weight:700; margin:8px 0 4px; }
+  .price-amount span{ font-family:var(--mono); font-size:16px; color:var(--muted-ink); font-weight:400; }
+  .price-card .no-fee{ font-size:13.5px; color:var(--muted-ink); margin-bottom:30px; }
+  .price-list{ text-align:left; display:flex; flex-direction:column; gap:12px; margin-bottom:32px; }
+  .price-list li{ display:flex; gap:10px; font-size:14.5px; align-items:flex-start; }
+  .price-list li::before{ content:'✓'; color:var(--teal); font-weight:700; flex-shrink:0; }
+  .refund-note{ font-size:12.5px; color:var(--muted-ink); border-top:1px dashed rgba(20,24,43,.15); padding-top:18px; }
+
+  /* ============================================================
+     PERSONAL LETTER
+     ============================================================ */
+  .letter{ background:var(--cream-dim); }
+  .letter .wrap{ max-width:760px; }
+  .letter h2{ font-size:clamp(24px,3vw,32px); margin-bottom:26px; }
+  .letter p{ font-size:16.5px; color:var(--ink); margin-bottom:18px; }
+  .letter p.sign{ font-family:var(--display); font-style:italic; font-size:19px; margin-top:8px; }
+
+  /* ============================================================
+     FAQ
+     ============================================================ */
+  .faq{ background:var(--cream); }
+  .faq h2{ font-size:clamp(26px,3.2vw,36px); margin-bottom:36px; }
+  .faq-item{ border-bottom:1px solid rgba(20,24,43,.12); padding:20px 0; }
+  .faq-item summary{ cursor:pointer; font-weight:600; font-size:16px; list-style:none; display:flex; justify-content:space-between; align-items:center; }
+  .faq-item summary::-webkit-details-marker{ display:none; }
+  .faq-item summary::after{ content:'+'; font-family:var(--mono); color:var(--amber-dim); font-size:20px; }
+  .faq-item[open] summary::after{ content:'–'; }
+  .faq-item p{ margin-top:12px; font-size:14.5px; color:var(--muted-ink); max-width:70ch; }
+
+  /* ============================================================
+     FINAL CTA
+     ============================================================ */
+  .final-cta{
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(232,163,61,.18), transparent 60%),
+      var(--navy);
+    color:var(--cream); text-align:center;
+  }
+  .final-cta h2{ font-size:clamp(28px,4vw,42px); color:var(--cream); max-width:22ch; margin:0 auto 20px; }
+  .final-cta p{ color:var(--muted); font-size:16px; margin-bottom:34px; }
+  .final-ctas{ display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin-bottom:20px; }
+  .final-cta .whatsapp{ font-family:var(--mono); font-size:14px; color:var(--amber); }
+
+  footer{ background:var(--navy); border-top:1px solid var(--navy-line); padding:36px 0; }
+  footer .wrap{ display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; }
+  footer .foot-logo{ font-family:var(--display); color:var(--cream); font-size:16px; }
+  footer .foot-logo img{
+  width: 90px;
+  height: 90px
+  }
+  footer .foot-links{ display:flex; gap:22px; font-size:13px; color:var(--muted); }
+
+  .note{
+    font-family:var(--mono); font-size:11.5px; color:var(--amber-dim);
+    background:rgba(232,163,61,.1); border:1px dashed var(--amber);
+    border-radius:10px; padding:10px 14px; margin-top:14px; display:inline-block;
+  }
+  .walink {
+  color:#25D366;
+  font-weight: bold;
+  }
+</style>
+</head>
+<body>
+
+<!-- ============================================================
+     NAV
+     ============================================================ -->
+<header class="nav">
+  <div class="wrap">
+    <div class="logo"><img src="oficial.png" alt="Clube de Linguas logo"/>Clube de <span>Línguas</span></div>
+    <nav class="nav-links">
+      <a href="#produto">O curso</a>
+      <a href="#resultados">Resultados</a>
+      <a href="#precos">Preço</a>
+      <a href="#faq">Perguntas</a>
+    </nav>
+    <a href="https://wa.me/message/45BMDRVL2TARI1" target="_blank" class="btn btn-primary nav-cta">Começar agora</a>
+  </div>
+</header>
+
+<!-- ============================================================
+     SECTION: HERO
+     ============================================================ -->
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">Aulas de Inglês Online</div>
+      <h1>Fale inglês com <em>confiança</em> no trabalho — sem abrir mão da sua rotina</h1>
+      <p class="lede">4 aulas práticas por semana, no horário que você escolher — mesmo às 23h. Turmas pequenas, feedback em tempo real, e você começa a falar desde a primeira aula.</p>
+      <div class="hero-ctas">
+        <a href="https://wa.me/message/45BMDRVL2TARI1" target="_blank" class="btn btn-primary">Quero começar agora</a>
+        <a href="https://wa.me/message/45BMDRVL2TARI1" target="_blank" class="btn btn-ghost-dark">Fazer aula-teste grátis</a>
+      </div>
+      <div class="hero-microcopy">1500 MT / mês · sem taxa de inscrição · <a class="walink" href="https://wa.me/message/45BMDRVL2TARI1" target="_blank">WhatsApp +258 84 686 1051</a></div>
+    </div>
+
+    <!-- SIGNATURE ELEMENT: hour-dial, reinforces "você escolhe a hora" -->
+    <div class="dial-card">
+      <div class="dial-label">Você escolhe a sua hora</div>
+      <svg class="dial" viewBox="0 0 240 240" fill="none">
+        <circle cx="120" cy="120" r="108" stroke="#343C68" stroke-width="1.5"/>
+        <!-- hour ticks -->
+        <g stroke="#4A5183" stroke-width="2">
+          <line x1="120" y1="16" x2="120" y2="28"/>
+          <line x1="120" y1="212" x2="120" y2="224"/>
+          <line x1="16" y1="120" x2="28" y2="120"/>
+          <line x1="212" y1="120" x2="224" y2="120"/>
+        </g>
+        <!-- highlighted evening arc 17h-23h -->
+        <path d="M 120 120 L 120 12 A 108 108 0 0 1 213.5 174" stroke="#E8A33D" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.85"/>
+        <text x="120" y="46" fill="#9BA3C4" font-family="Space Mono" font-size="10" text-anchor="middle">17h</text>
+        <text x="196" y="182" fill="#E8A33D" font-family="Space Mono" font-size="10" text-anchor="middle">23h</text>
+        <!-- selected hour marker -->
+        <circle cx="196" cy="150" r="7" fill="#52C4B0"/>
+        <circle cx="120" cy="120" r="4" fill="#F7F2E7"/>
+        <line x1="120" y1="120" x2="196" y2="150" stroke="#F7F2E7" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <div class="dial-caption">Escolhido: <strong>21h00</strong> — a mesma hora, todos os dias de aula.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION: PROBLEMA
+     ============================================================ -->
+<section class="problem">
+  <div class="wrap">
+    <div class="intro">
+      <div class="eyebrow" style="color:var(--amber-dim)">O problema</div>
+      <h2>Sei que tentar melhorar o seu inglês com uma agenda cheia é difícil.</h2>
+      <p>Você precisa de aulas que caibam na sua rotina — não o contrário. Se algo disto soa familiar, você não está sozinho:</p>
+    </div>
+    <div class="problem-grid">
+      <div class="problem-item"><span class="mark">”</span><p>Já se inscreveu num curso e desistiu porque o horário não encaixava na rotina de trabalho.</p></div>
+      <div class="problem-item"><span class="mark">”</span><p>Mesmo depois de meses de aulas, ainda trava numa reunião ou entrevista em inglês.</p></div>
+      <div class="problem-item"><span class="mark">”</span><p>Sente vergonha de falar por achar que vai "soar errado".</p></div>
+      <div class="problem-item"><span class="mark">”</span><p>Já tentou aprender sozinho, mas sem estrutura o progresso não acontece.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION: SOLUÇÃO + AUTO-SELEÇÃO
+     ============================================================ -->
+<section class="solution">
+  <div class="wrap">
+    <div>
+      <div class="eyebrow">A solução</div>
+      <h2>Aulas de inglês feitas para quem trabalha ou estuda — não o contrário.</h2>
+      <p class="pitch"><strong>Turmas pequenas, horário fixo escolhido por você, e um método 100% prático</strong> onde fala inglês desde o primeiro dia.</p>
+      <p class="pitch">E fazemos isto rápido: turma alinhada ao seu nível, progresso estruturado, feedback em tempo real.</p>
+    </div>
+    <div>
+      <div class="select-title">Isto é para você se…</div>
+      <div class="select-list">
+        <div class="select-item"><span class="check">✓</span><p>Trabalha (ou quer trabalhar) numa empresa internacional onde o inglês é essencial.</p></div>
+        <div class="select-item"><span class="check">✓</span><p>Já tentou outros cursos e desistiu por falta de tempo ou resultados.</p></div>
+        <div class="select-item"><span class="check">✓</span><p>Prefere aulas depois do expediente — inclusive à noite.</p></div>
+        <div class="select-item"><span class="check">✓</span><p>Quer um grupo pequeno em vez de turmas lotadas onde ninguém fala.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION: PRODUTO / COMO FUNCIONA
+     ============================================================ -->
+<section class="product" id="produto">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--amber-dim)">Clube de Línguas</div>
+    <h2>Um curso estruturado, do nível 1 ao 6, focado em comunicação real.</h2>
+    <p class="intro">Do primeiro nivelamento à primeira conversa fluida — aqui está o caminho.</p>
+
+    <div class="steps">
+      <div class="step"><div class="num">1</div><h4>Descubra o seu nível</h4><p>Aula-teste de nivelamento gratuita, se não souber por onde começar.</p></div>
+      <div class="step"><div class="num">2</div><h4>Escolha o horário</h4><p>De preferência pós-laboral — inclusive até às 23h.</p></div>
+      <div class="step"><div class="num">3</div><h4>Entre na turma</h4><p>Grupos pequenos de 4 a 6 estudantes no seu nível.</p></div>
+      <div class="step"><div class="num">4</div><h4>Fale desde o dia 1</h4><p>Método centrado no aluno, com situações do dia a dia.</p></div>
+      <div class="step"><div class="num">5</div><h4>Evolua com acompanhamento</h4><p>Feedback em tempo real e guias de auto-estudo.</p></div>
+    </div>
+
+    <div class="pull-quote">
+      <div class="quote-mark">“</div>
+      <div>
+        <p>Graças a este curso consegui fazer o teste do Duolingo e alcançar o nível B2+, que me permite estudar ou trabalhar no estrangeiro.</p>
+        <cite>— Farias, Licenciado em Geografia, concluiu o nível 4</cite>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION: CREDIBILIDADE
+     ============================================================ -->
+<section class="credibility">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--amber-dim)">Quem ensina</div>
+    <div class="cred-card">
+      <div class="cred-photo"><img class="foto-100" alt="FOTO Fidel Livino Pedro" src="fidel-720px.png"/></div>
+      <div>
+        <h3>Fidel Livino Pedro</h3>
+        <div class="role">Fundador · Clube de Línguas, SU, Lda.</div>
+        <p>Professor de Inglês e Português para Estrangeiros, tradutor e intérprete, com mais de 5 anos de experiência — incluindo colaborações com organizações internacionais de renome.</p>
+        <div class="cred-tags">
+          <span class="cred-tag">KOFIH</span>
+          <span class="cred-tag">CAFAC — Comissão Africana de Aviação Civil</span>
+          <span class="cred-tag">Ministério da Saúde</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION: RESULTADOS + TESTEMUNHOS
+     ============================================================ -->
+<section class="results" id="resultados">
+  <div class="wrap">
+    <div class="eyebrow">Desde Agosto de 2025</div>
+    <h2>Resultados reais, medidos com números reais.</h2>
+    <div class="stat-grid">
+      <div class="stat"><div class="n">15+</div><div class="l">Alunos no curso</div></div>
+      <div class="stat"><div class="n">10+</div><div class="l">Impacto direto na carreira</div></div>
+      <div class="stat"><div class="n">1</div><div class="l">Aprovado em exame internacional</div></div>
+      <div class="stat"><div class="n">15+</div><div class="l">Reportaram melhorias</div></div>
+      <div class="stat"><div class="n">20+</div><div class="l">A estudar agora</div></div>
+      <div class="stat"><div class="n">5+</div><div class="l">Turmas ativas</div></div>
+    </div>
+    <div class="testi-grid">
+      <div class="testi"><p>"Este curso deu-me mais confiança no meu inglês falado e, graças a isso, consegui fazer uma entrevista em inglês e passar."</p><cite>— João, Licenciado em Geologia, nível 2</cite></div>
+      <div class="testi"><p>"Tinha muitas dificuldades em entender pessoas de diferentes origens. Com as aulas, tem sido cada vez mais fácil interagir com colegas."</p><cite>— Kátia, Engenheira, nível 2</cite></div>
+      <div class="testi"><p>"Agora sinto-me muito mais à vontade do que quando comecei. Consigo entender e responder a muitas situações."</p><cite>— Sergio, Técnico Ambiental, nível 2</cite></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION: PREÇO
+     ============================================================ -->
+<section class="pricing" id="precos">
+  <div class="wrap">
+    <div class="price-card">
+      <div class="eyebrow">Investimento</div>
+      <div class="price-amount">1500 MT <span>/ mês</span></div>
+      <div class="no-fee">Sem taxa de inscrição ou matrícula</div>
+      <ul class="price-list">
+        <li>4 aulas por semana (segunda a quinta), 50 min cada</li>
+        <li>Turmas pequenas: 4–6 estudantes</li>
+        <li>Material de estudo gratuito</li>
+        <li>Feedback ao vivo em cada aula</li>
+        <li>Áudios de falantes nativos</li>
+        <li>English Speaking Club no WhatsApp</li>
+        <li>Aulas via Zoom ou Google Meet</li>
+      </ul>
+      <a href="https://wa.me/message/45BMDRVL2TARI1" target="_blank" class="btn btn-primary" style="width:100%">Quero garantir a minha vaga</a>
+      <p class="refund-note">Não há reembolsos — mas você tem direito a uma aula-teste gratuita antes de decidir.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION: CARTA PESSOAL
+     ============================================================ -->
+<section class="letter">
+  <div class="wrap">
+    <div class="eyebrow" style="color:var(--amber-dim)">Uma palavra do Fidel</div>
+    <h2>Eu sei o que é sentir que o seu inglês está a travar a sua carreira.</h2>
+    <p>Já vi muitos profissionais talentosos — engenheiros, geólogos, técnicos, geógrafos — perderem oportunidades não por falta de competência técnica, mas por não conseguirem comunicar com confiança em inglês.</p>
+    <p>Foi por isso que criei o Clube de Línguas: não mais um curso cheio de gramática sem contexto, mas um espaço onde você fala desde a primeira aula, num horário que respeita a sua rotina.</p>
+    <p>Ao longo dos últimos anos, trabalhando com organizações como a KOFIH e a CAFAC, aprendi que fluência não vem de decorar regras — vem de praticar, errar, e ser corrigido em tempo real, num grupo pequeno onde você não se perde.</p>
+    <p class="sign">— Fidel Livino Pedro</p>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION: FAQ
+     ============================================================ -->
+<section class="faq" id="faq">
+  <div class="wrap">
+    <h2>Perguntas frequentes</h2>
+    <details class="faq-item" open>
+      <summary>Não sei o meu nível. E agora?</summary>
+      <p>Oferecemos uma aula-teste de nivelamento gratuita para o(a) colocar na turma certa, do nível 1 ao 6.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Vou realmente falar inglês nas aulas?</summary>
+      <p>Sim — o método é prático e centrado no aluno, com foco em comunicação real desde o primeiro dia.</p>
+    </details>
+    <details class="faq-item">
+      <summary>E se eu faltar a uma aula?</summary>
+      <p>Não há reposição individual, mas disponibilizamos guias de auto-estudo para acompanhar a turma.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Para quem é este curso?</summary>
+      <p>Principalmente para quem trabalha em empresas internacionais e precisa do inglês no dia a dia profissional, mas tem pouco tempo disponível.</p>
+    </details>
+  </div>
+</section>
+
+<!-- ============================================================
+     SECTION: CTA FINAL
+     ============================================================ -->
+<section class="final-cta">
+  <div class="wrap">
+    <h2>Pronto(a) para falar inglês com confiança, mesmo com a agenda cheia?</h2>
+    <p>Escolha o seu horário, faça o pagamento da primeira mensalidade e comece esta semana.</p>
+    <div class="final-ctas">
+      <a href="https://wa.me/message/45BMDRVL2TARI1" target="_blank" class="btn btn-primary">Quero escolher o meu horário</a>
+      <a href="https://wa.me/message/45BMDRVL2TARI1" target="_blank" class="btn btn-ghost-dark">Vou testar o meu nível grátis</a>
+    </div>
+    <div class="whatsapp"><a class="walink" href="https://wa.me/message/45BMDRVL2TARI1" target="_blank">WhatsApp +258 84 686 1051</a></div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="foot-logo"><img src="oficial.png" alt="Clube de Linguas logo"/></div>
+    <div class="foot-links">
+      <a href="https://wa.me/message/45BMDRVL2TARI1">Inglês</a>
+      <a href="https://wa.me/message/45BMDRVL2TARI1">Mandarim</a>
+      <a href="https://wa.me/message/45BMDRVL2TARI1">Português para Estrangeiros</a>
+      <a href="https://wa.me/message/45BMDRVL2TARI1">Tradução & Interpretação</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
