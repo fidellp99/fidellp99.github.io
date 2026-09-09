@@ -1,4 +1,4 @@
-name: Deploy Publii Blog
+name: Deploy Publii Site
 
 on:
   push:
@@ -9,43 +9,43 @@ permissions:
   contents: write
 
 jobs:
-  deploy-blog:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
       - name: Checkout main website
         uses: actions/checkout@v4
 
-      - name: Checkout Publii blog
+      - name: Checkout Publii site
         uses: actions/checkout@v4
         with:
           repository: fidellp99/artigos
-          path: blog-source
+          path: artigos-source
           token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Remove old blog
+      - name: Remove old artigos folder
         run: |
-          rm -rf blog
+          rm -rf artigos
 
-      - name: Copy Publii blog
+      - name: Copy Publii files
         run: |
-          cp -R blog-source/. blog/
+          cp -R artigos-source/. artigos/
 
-      - name: Remove Git files from blog
+      - name: Remove Git files
         run: |
-          rm -rf blog/.git
-          rm -rf blog/.github
+          rm -rf artigos/.git
+          rm -rf artigos/.github
 
-      - name: Commit blog
+      - name: Commit and push
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
 
-          git add blog/
+          git add artigos/
 
           if git diff --cached --quiet; then
-            echo "No blog changes to deploy."
+            echo "No changes to deploy."
           else
-            git commit -m "Deploy Publii blog"
+            git commit -m "Deploy Publii site"
             git push
           fi
