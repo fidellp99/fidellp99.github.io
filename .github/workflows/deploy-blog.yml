@@ -1,0 +1,51 @@
+name: Deploy Publii Blog
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  deploy-blog:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout main website
+        uses: actions/checkout@v4
+
+      - name: Checkout Publii blog
+        uses: actions/checkout@v4
+        with:
+          repository: fidellp99/artigos
+          path: blog-source
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Remove old blog
+        run: |
+          rm -rf blog
+
+      - name: Copy Publii blog
+        run: |
+          cp -R blog-source/. blog/
+
+      - name: Remove Git files from blog
+        run: |
+          rm -rf blog/.git
+          rm -rf blog/.github
+
+      - name: Commit blog
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add blog/
+
+          if git diff --cached --quiet; then
+            echo "No blog changes to deploy."
+          else
+            git commit -m "Deploy Publii blog"
+            git push
+          fi
