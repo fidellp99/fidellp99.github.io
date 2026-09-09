@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://clinguas.com/artigos/sitemap.xml

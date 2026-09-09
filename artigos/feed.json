@@ -1,0 +1,27 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "Artigos do Clube de Línguas",
+    "description": "",
+    "home_page_url": "https://clinguas.com/artigos",
+    "feed_url": "https://clinguas.com/artigos/feed.json",
+    "user_comment": "",
+    "author": {
+        "name": "Fidel Livino Pedro"
+    },
+    "items": [
+        {
+            "id": "https://clinguas.com/artigos/como-funciona-a-traducao-ajuramentada-em-mocambique.html",
+            "url": "https://clinguas.com/artigos/como-funciona-a-traducao-ajuramentada-em-mocambique.html",
+            "title": "Como Funciona a Tradução Ajuramentada em Moçambique",
+            "summary": "Está em dúvidas? A tradução ajuramentada é uma tradução oficial de documentos que se destina a produzir efeitos perante instituições&hellip;",
+            "content_html": "<figure class=\"post__image align-center\"><img loading=\"lazy\"  src=\"https://clinguas.com/artigos/media/posts/1/paper-and-stamp-clube-de-linguas.jpg\" alt=\"Papel e carimbo - simboliza legalidade\" width=\"581\" height=\"387\" sizes=\"(max-width: 48em) 100vw, 768px\" srcset=\"https://clinguas.com/artigos/media/posts/1/responsive/paper-and-stamp-clube-de-linguas-xs.jpg 300w ,https://clinguas.com/artigos/media/posts/1/responsive/paper-and-stamp-clube-de-linguas-sm.jpg 480w ,https://clinguas.com/artigos/media/posts/1/responsive/paper-and-stamp-clube-de-linguas-md.jpg 768w\"></figure>\n<p>Está em dúvidas? A tradução ajuramentada é uma tradução oficial de documentos que se destina a produzir efeitos perante instituições públicas, tribunais, embaixadas, universidades e outras entidades que exigem uma tradução formalmente reconhecida.<br><br>Em Moçambique, a tradução ajuramentada é feita por tradutores credenciados pelo Tribunal Judicial da Província competente. Estes profissionais estão habilitados a traduzir documentos oficiais e a conferir à tradução a necessária autenticidade para que possa ser apresentada junto das entidades que a solicitam.<br><br>Normalmente, o processo começa com a apresentação do documento original ou de uma cópia devidamente reconhecida ao tradutor. O tradutor procede à tradução integral do documento, procurando manter fielmente o conteúdo, a estrutura e as informações constantes do original. Depois de concluída, a tradução é assinada e autenticada de acordo com os procedimentos aplicáveis, assumindo o tradutor a responsabilidade pela fidelidade da tradução.<br><br>É importante distinguir a tradução ajuramentada de uma tradução comum. Enquanto uma tradução comum pode ser realizada por qualquer pessoa com conhecimentos linguísticos adequados, a tradução ajuramentada exige que o profissional tenha o devido credenciamento para que a tradução possa ser reconhecida oficialmente.</p>\n<p>Assim, quando uma instituição exige uma tradução ajuramentada em Moçambique, é recomendável confirmar previamente se o tradutor está devidamente credenciado pelo Tribunal Judicial da Província competente e se a tradução cumpre os requisitos da entidade onde será apresentada.<br><br>Em resumo, a tradução ajuramentada garante que um documento traduzido possa ser utilizado oficialmente, conferindo maior segurança jurídica e confiança quanto à correspondência entre o documento original e a sua tradução.</p>",
+            "author": {
+                "name": "Fidel Livino Pedro"
+            },
+            "tags": [
+            ],
+            "date_published": "2026-09-09T22:30:47+02:00",
+            "date_modified": "2026-09-09T22:50:11+02:00"
+        }
+    ]
+}
