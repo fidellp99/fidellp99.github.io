@@ -3196,6 +3196,10 @@ src="https://www.facebook.com/tr?id=1757209635569394&ev=PageView&noscript=1"
        ===================================================== */
 
     function bookingSuccess(result) {
+        // Meta Pixel: confirmed demo booking
+      if (typeof fbq === 'function') {
+        fbq('track', 'Schedule');
+      }
 
       const studentName =
         document
