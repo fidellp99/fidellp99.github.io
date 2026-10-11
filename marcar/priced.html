@@ -518,6 +518,34 @@
       input {height:54px;font-size:17px}
       .submit-button {min-height:58px;font-size:18px}
     }
+    .brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.brand-logo {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+
+@media (max-width: 480px) {
+  .brand {
+    gap: 8px;
+    font-size: 1rem;
+  }
+
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+  }
+}
   </style>
 
   <!-- Meta Pixel Code -->
@@ -543,7 +571,14 @@
   <div id="deck">
     <section class="intro-screen" id="introduction">
       <div class="intro-inner">
-        <div class="brand">Clinguas</div>
+        <div class="brand"><a href="https://clinguas.com" class="brand">
+  <img
+    src="https://clinguas.com/oficial.png"
+    alt="Logótipo do Clube de Línguas"
+    class="brand-logo"
+  >
+  <span>Clube de Línguas</span>
+</a></div>
 
         <h1>Comece a falar Inglês com confiança</h1>
 
