@@ -1,34 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-MZ">
 <head>
-  <script id="Cookiebot" src="https://consent.cookiebot.com/uc.js"
-    data-cbid="b5c57fbb-2bbe-44b0-a400-328bf524b519" type="text/javascript"></script>
-
-  <script data-cookieconsent="ignore">
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag("consent", "default", {
-      ad_personalization:"denied",
-      ad_storage:"denied",
-      ad_user_data:"denied",
-      analytics_storage:"denied",
-      functionality_storage:"denied",
-      personalization_storage:"denied",
-      security_storage:"granted",
-      wait_for_update:500
-    });
-    gtag("set","ads_data_redaction",true);
-    gtag("set","url_passthrough",false);
-  </script>
-
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7XTE6ZRWM6"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js',new Date());
-    gtag('config','G-7XTE6ZRWM6');
-  </script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <title>Marque a sua sessão experimental gratuita | Clinguas</title>
@@ -37,7 +9,7 @@
   <link rel="canonical" href="https://clinguas.com/marcar/">
   <meta http-equiv="content-language" content="pt-MZ">
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#161B33">
+  <meta name="theme-color" content="#0a4c86">
   <meta name="apple-mobile-web-app-title" content="Clinguas">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
@@ -94,13 +66,13 @@
 
   <style>
     :root {
-      --navy:#161B33;
-      --navy-light:#232A4D;
-      --cream:#F7F2E7;
-      --ink:#14182B;
+      --navy:#0a4c86;
+      --navy-light:#4678a4;
+      --cream:#ffffff;
+      --ink:#1a1a1a;
       --muted:#666;
-      --amber:#E8A33D;
-      --teal:#52C4B0;
+      --amber:#0a4c86;
+      --teal:#28a745;
       --display:'Fraunces',serif;
       --body:'Work Sans',sans-serif;
     }
@@ -109,7 +81,7 @@
     html {scroll-behavior:smooth;font-size:16px}
     body {
       margin:0;
-      font-family:var(--body);
+      font-family:Arial, 'Roboto', sans-serif;
       background:var(--cream);
       color:var(--ink);
       line-height:1.55;
@@ -141,7 +113,7 @@
       letter-spacing:-.5px
     }
     h1,.day-title,#confirmation h2 {
-      font-family:var(--display);
+      font-family:'Roboto', Arial, sans-serif;
       line-height:1.08;
       letter-spacing:-1px
     }
@@ -548,24 +520,7 @@
 }
   </style>
 
-  <!-- Meta Pixel Code -->
-  <script>
-    !function(f,b,e,v,n,t,s)
-    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-    n.queue=[];t=b.createElement(e);t.async=!0;
-    t.src=v;s=b.getElementsByTagName(e)[0];
-    s.parentNode.insertBefore(t,s)}(window, document,'script',
-    'https://connect.facebook.net/en_US/fbevents.js');
-    fbq('init','1757209635569394');
-    fbq('track','PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-    src="https://www.facebook.com/tr?id=1757209635569394&ev=PageView&noscript=1"
-    alt=""></noscript>
-  <!-- End Meta Pixel Code -->
-</head>
+  </head>
 
 <body>
   <div id="deck">
@@ -1033,8 +988,6 @@
        * enviar apenas depois da confirmação bem-sucedida.
        * A variável evita um segundo envio na mesma página.
        */
-      if (!leadEventSent && typeof window.fbq === "function") {
-        window.fbq("track", "Lead");
         leadEventSent = true;
       }
 
