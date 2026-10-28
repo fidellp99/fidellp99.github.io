@@ -76,7 +76,9 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Work+Sans:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   <link rel="icon" type="image/png" href="https://clinguas.com/oficial.png">
   <link rel="apple-touch-icon" href="https://clinguas.com/oficial.png">
 
@@ -572,7 +574,7 @@
   <div id="deck">
     <section class="intro-screen" id="introduction">
       <div class="intro-inner">
-        <div class="brand"><a href="https://clinguas.com" class="brand">
+        <div class="brand"><a href="../index.html" class="brand" style="text-decoration: none;">
   <img
     src="https://clinguas.com/oficial.png"
     alt="Logótipo do Clube de Línguas"
@@ -657,9 +659,10 @@
         </div>
       </div>
 
-      <button type="button" class="scroll-button" onclick="scrollToFirstDay()">
-        <span class="sb-d">Deslize para ver os horários ↓</span>
-        <span class="sb-m">Ver horários →</span>
+      <button type="button" class="scroll-button" onclick="scrollToFirstDay()" style="display: inline-flex; align-items: center; gap: 8px;">
+        <span class="material-icons" style="font-size: 20px;">keyboard_arrow_down</span>
+        <span class="sb-d">Deslize para ver os horários</span>
+        <span class="sb-m">Ver horários</span>
       </button>
     </section>
 
@@ -705,7 +708,7 @@
         <label for="studentWhatsapp">WhatsApp</label>
         <input type="tel" id="studentWhatsapp" required autocomplete="tel" placeholder="+258...">
 
-        <button type="submit" class="submit-button" id="bookButton">Confirmar sessão gratuita</button>
+        <button type="submit" class="submit-button" id="bookButton" style="display: inline-flex; align-items: center; gap: 8px;"><span class="material-icons">check_circle</span>Confirmar sessão gratuita</button>
       </form>
 
       <div id="bookingStatus" role="status" aria-live="polite"></div>
@@ -726,7 +729,7 @@
         <div><strong>Professor(a)</strong><span id="confirmationTeacher"></span></div>
       </div>
 
-      <a id="whatsappLink" class="whatsapp-button" href="#" target="_blank" rel="noopener">
+      <a id="whatsappLink" class="whatsapp-button" href="#" target="_blank" rel="noopener"><i class="fab fa-whatsapp" style="font-size: 20px;"></i>
         Continuar no WhatsApp
       </a>
 
