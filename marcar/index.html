@@ -260,6 +260,7 @@
       white-space:nowrap
     }
     .sb-m {display:none}
+    .sb-d {display:flex; align-items:center; gap:6px;}
 
     #loading {
       min-height:100vh;
@@ -488,8 +489,8 @@
         font-size:18px;border-radius:40px
       }
       .scroll-button:active {transform:scale(.97)}
-      .sb-d {display:none}
-      .sb-m {display:inline}
+      .sb-d {display:none !important}
+      .sb-m {display:flex !important; align-items:center; gap:6px;}
       .day-screen {
         justify-content:flex-start;overflow-x:hidden;overflow-y:auto;
         -webkit-overflow-scrolling:touch;
@@ -658,9 +659,9 @@
         </div>
       </div>
 
-      <button type="button" class="scroll-button" onclick="scrollToFirstDay()">
-        <span class="sb-d" style="display:flex;align-items:center;gap:6px;"><span class="material-icons" style="font-size:18px;">keyboard_arrow_down</span>Deslize para ver os horários</span>
-        <span class="sb-m" style="display:flex;align-items:center;gap:6px;">Ver horários<span class="material-icons" style="font-size:18px;">keyboard_arrow_right</span></span>
+      <button type="button" class="scroll-button" onclick="scrollToFirstDay()" style="display:inline-flex;align-items:center;gap:8px;">
+        <span class="sb-d"><span class="material-icons" style="font-size:18px;">keyboard_arrow_down</span>Deslize para ver os horários</span>
+        <span class="sb-m">Ver horários<span class="material-icons" style="font-size:18px;">keyboard_arrow_right</span></span>
       </button>
     </section>
 
