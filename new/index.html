@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="pt-MZ">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clube de Línguas — Aulas de Inglês Online em Moçambique | Fale com Confiança</title>
+    <meta name="description" content="Aulas de inglês online para quem trabalha ou estuda. 4 aulas por semana, horário flexível (mesmo às 23h), turmas pequenas e método prático. Desde 1500 MT/mês.">
+    <meta name="author" content="Clube de Línguas, SU, Lda.">
+    <link rel="canonical" href="https://clinguas.com">
+    <meta http-equiv="content-language" content="pt-MZ">
+    <meta name="robots" content="index, follow">
+    <meta name="theme-color" content="#0a4c86">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Clube de Línguas — Fale Inglês com Confiança no Trabalho">
+    <meta property="og:description" content="4 aulas práticas por semana, no horário que você escolher — mesmo às 23h. Turmas pequenas, feedback em tempo real, desde 1500 MT/mês.">
+    <meta property="og:image" content="https://clinguas.com/cover.png">
+    <meta property="og:url" content="https://clinguas.com">
+    <meta property="og:locale" content="pt_MZ">
+    <meta property="og:site_name" content="Clube de Línguas">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Clube de Línguas — Fale Inglês com Confiança no Trabalho">
+    <meta name="twitter:description" content="4 aulas práticas por semana, no horário que você escolher — mesmo às 23h. Turmas pequenas, feedback em tempo real, desde 1500 MT/mês.">
+    <meta name="twitter:image" content="https://clinguas.com/cover.png">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Arial:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="oficial.png">
+    <link rel="apple-touch-icon" href="oficial.png">
+    
+    <style>
+        :root {
+            --primary: #0a4c86;
+            --primary-dark: #083a66;
+            --primary-light: #4678a4;
+            --accent: #5a9fd4;
+            --bg-primary: #ffffff;
+            --bg-secondary: #f8f9fa;
+            --bg-dark: #0a4c86;
+            --text-primary: #1a1a1a;
+            --text-secondary: #4a4a4a;
+            --text-light: #ffffff;
+            --text-muted: #6c757d;
+            --border-color: #e0e0e0;
+            --success: #28a745;
+            --shadow: 0 2px 8px rgba(10, 76, 134, 0.1);
+            --shadow-hover: 0 4px 16px rgba(10, 76, 134, 0.2);
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        body {
+            font-family: Arial, 'Roboto', -apple-system, BlinkMacSystemFont, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+        
+        ul {
+            list-style: none;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--bg-primary);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            border-bottom: 3px solid var(--primary);
+        }
+        
+        nav {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 0;
+            flex-wrap: wrap;
+            gap: 16px;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary);
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+        
+        .logo img {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .logo-text {
+            display: flex;
+            flex-direction: column;
+            line-height: 1.2;
+        }
+        
+        .logo-subtitle {
+            font-size: 12px;
+            font-weight: 400;
+            color: var(--text-secondary);
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 32px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: var(--text-primary);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s ease;
+            position: relative;
+        }
+        
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary);
+            transition: width 0.2s ease;
+        }
+        
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 15px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            color: var(--text-light);
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            box-shadow: var(--shadow-hover);
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--primary);
+            border: 2px solid var(--primary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: var(--primary);
+            color: var(--text-light);
+        }
+        
+        .btn-white {
+            background-color: var(--bg-primary);
+            color: var(--primary);
+        }
+        
+        .btn-white:hover {
+            background-color: var(--bg-secondary);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            padding: 80px 0;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(2px 2px at 20px 30px, #eee, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 40px 70px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 90px 40px, #fff, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 130px 80px, #fff, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 150px 100px;
+            opacity: 0.3;
+            pointer-events: none;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 60px;
+            align-items: center;
+        }
+        
+        .hero-text h1 {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 48px;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 24px;
+        }
+        
+        .hero-text .highlight {
+            color: #7fb3e6;
+        }
+        
+        .hero-text p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            color: #e0e0e0;
+            line-height: 1.8;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 24px;
+        }
+        
+        .hero-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: #e0e0e0;
+            font-size: 14px;
+        }
+        
+        .hero-info i {
+            color: #25D366;
+        }
+        
+        .hero-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 32px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            text-align: center;
+        }
+        
+        .hero-card h3 {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 22px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+        }
+        
+        .hero-card .time {
+            font-size: 42px;
+            font-weight: 700;
+            color: #7fb3e6;
+            margin: 16px 0;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+        
+        .hero-card p {
+            color: #e0e0e0;
+            font-size: 15px;
+        }
+        
+        /* Section Styles */
+        section {
+            padding: 80px 0;
+        }
+        
+        .section-header {
+            text-align: center;
+            max-width: 700px;
+            margin: 0 auto 60px;
+        }
+        
+        .section-header h2 {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        
+        .section-header p {
+            font-size: 17px;
+            color: var(--text-secondary);
+        }
+        
+        .bg-secondary {
+            background-color: var(--bg-secondary);
+        }
+        
+        /* Problem Section */
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 24px;
+        }
+        
+        .problem-card {
+            background-color: var(--bg-primary);
+            padding: 28px;
+            border-left: 4px solid var(--primary);
+            box-shadow: var(--shadow);
+            display: flex;
+            gap: 16px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .problem-card:hover {
+            transform: translateX(4px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .problem-card i {
+            color: var(--primary);
+            font-size: 24px;
+            flex-shrink: 0;
+        }
+        
+        .problem-card p {
+            color: var(--text-primary);
+            font-size: 15px;
+        }
+        
+        /* Features Section */
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 32px;
+        }
+        
+        .feature-card {
+            text-align: center;
+            padding: 32px 24px;
+            background-color: var(--bg-primary);
+            box-shadow: var(--shadow);
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--shadow-hover);
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--primary);
+            color: var(--text-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 32px;
+        }
+        
+        .feature-card h3 {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            color: var(--primary);
+        }
+        
+        .feature-card p {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+        
+        /* Steps Section */
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr);
+            gap: 20px;
+            position: relative;
+        }
+        
+        .step-card {
+            background-color: var(--bg-primary);
+            padding: 24px 20px;
+            text-align: center;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .step-number {
+            width: 40px;
+            height: 40px;
+            background-color: var(--primary);
+            color: var(--text-light);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 16px;
+            font-weight: 700;
+            font-size: 18px;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+        
+        .step-card h4 {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--primary);
+        }
+        
+        .step-card p {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        /* About Section */
+        .about-grid {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 48px;
+            align-items: center;
+            background-color: var(--bg-primary);
+            padding: 48px;
+            box-shadow: var(--shadow);
+        }
+        
+        .about-image {
+            width: 300px;
+            height: 300px;
+            overflow: hidden;
+            border: 4px solid var(--primary);
+        }
+        
+        .about-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .about-content h3 {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 8px;
+        }
+        
+        .about-content .role {
+            color: var(--text-secondary);
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+        
+        .about-content p {
+            color: var(--text-primary);
+            margin-bottom: 16px;
+            font-size: 15px;
+        }
+        
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-top: 24px;
+        }
+        
+        .tag {
+            background-color: var(--primary);
+            color: var(--text-light);
+            padding: 6px 16px;
+            font-size: 13px;
+            font-weight: 500;
+        }
+        
+        /* Testimonials */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--bg-primary);
+            padding: 32px;
+            box-shadow: var(--shadow);
+            position: relative;
+        }
+        
+        .testimonial-card::before {
+            content: '"';
+            position: absolute;
+            top: 16px;
+            left: 24px;
+            font-size: 48px;
+            color: var(--primary);
+            font-family: Georgia, serif;
+            line-height: 1;
+            opacity: 0.3;
+        }
+        
+        .testimonial-card p {
+            color: var(--text-primary);
+            font-style: italic;
+            margin-bottom: 20px;
+            margin-top: 32px;
+            font-size: 15px;
+        }
+        
+        .testimonial-author {
+            font-weight: 600;
+            color: var(--primary);
+            font-size: 14px;
+        }
+        
+        .testimonial-role {
+            color: var(--text-secondary);
+            font-size: 13px;
+        }
+        
+        /* Pricing */
+        .pricing-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background-color: var(--bg-primary);
+            box-shadow: 0 4px 24px rgba(10, 76, 134, 0.15);
+            overflow: hidden;
+        }
+        
+        .pricing-header {
+            background-color: var(--primary);
+            color: var(--text-light);
+            text-align: center;
+            padding: 32px;
+        }
+        
+        .pricing-header h3 {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 24px;
+            margin-bottom: 12px;
+        }
+        
+        .pricing-amount {
+            font-size: 48px;
+            font-weight: 700;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+        
+        .pricing-period {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .pricing-body {
+            padding: 40px;
+        }
+        
+        .pricing-features {
+            margin-bottom: 32px;
+        }
+        
+        .pricing-features li {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 12px 0;
+            color: var(--text-primary);
+            font-size: 15px;
+        }
+        
+        .pricing-features i {
+            color: var(--success);
+            font-size: 20px;
+            flex-shrink: 0;
+        }
+        
+        .pricing-footer {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        .pricing-note {
+            margin-top: 16px;
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+        
+        /* CTA Section */
+        .cta {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: 
+                radial-gradient(2px 2px at 50px 50px, #eee, rgba(0,0,0,0)),
+                radial-gradient(2px 2px at 100px 100px, #fff, rgba(0,0,0,0));
+            background-repeat: repeat;
+            background-size: 200px 200px;
+            opacity: 0.2;
+            pointer-events: none;
+        }
+        
+        .cta-content {
+            position: relative;
+            z-index: 1;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .cta h2 {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 38px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            line-height: 1.3;
+        }
+        
+        .cta p {
+            font-size: 18px;
+            margin-bottom: 32px;
+            color: #e0e0e0;
+        }
+        
+        .cta-buttons {
+            display: flex;
+            gap: 16px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            padding: 48px 0 24px;
+            border-top: 2px solid rgba(255, 255, 255, 0.1);
+        }
+        
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 48px;
+            margin-bottom: 32px;
+        }
+        
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 16px;
+        }
+        
+        .footer-logo img {
+            width: 70px;
+            height: 70px;
+        }
+        
+        .footer-logo-text {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 22px;
+            font-weight: 700;
+        }
+        
+        .footer-about p {
+            color: #e0e0e0;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        
+        .footer-contact {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: #25D366;
+            font-weight: 600;
+        }
+        
+        .footer-links h4 {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 18px;
+            margin-bottom: 16px;
+        }
+        
+        .footer-links ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .footer-links a {
+            color: #e0e0e0;
+            font-size: 14px;
+            transition: color 0.2s ease;
+        }
+        
+        .footer-links a:hover {
+            color: var(--text-light);
+        }
+        
+        .footer-bottom {
+            text-align: center;
+            padding-top: 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #b0b0b0;
+            font-size: 13px;
+        }
+        
+        /* Responsive */
+        @media (max-width: 968px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .steps-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            
+            .about-grid {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+            
+            .about-image {
+                margin: 0 auto;
+            }
+            
+            .testimonials-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        @media (max-width: 640px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero-text h1 {
+                font-size: 36px;
+            }
+            
+            .section-header h2 {
+                font-size: 28px;
+            }
+            
+            .problem-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .about-grid {
+                padding: 32px 24px;
+            }
+            
+            .pricing-body {
+                padding: 32px 24px;
+            }
+            
+            .cta h2 {
+                font-size: 30px;
+            }
+            
+            .hero-buttons, .cta-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="container">
+            <div class="logo">
+                <img src="oficial.png" alt="Clube de Línguas Logo">
+                <div class="logo-text">
+                    <span>Clube de Línguas</span>
+                    <span class="logo-subtitle">Aulas de Inglês Online</span>
+                </div>
+            </div>
+            <div class="nav-links">
+                <a href="#inicio">Início</a>
+                <a href="#curso">O Curso</a>
+                <a href="#sobre">Quem Ensina</a>
+                <a href="#depoimentos">Depoimentos</a>
+                <a href="#precos">Preços</a>
+                <a href="#faq">Perguntas</a>
+            </div>
+            <a href="#precos" class="btn btn-primary">
+                <span class="material-icons" style="font-size: 20px;">play_arrow</span>
+                Começar Agora
+            </a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Fale inglês com <span class="highlight">confiança</span> no trabalho — sem abrir mão da sua rotina</h1>
+                    <p>4 aulas práticas por semana, no horário que você escolher — mesmo às 23h. Turmas pequenas, feedback em tempo real, e você começa a falar desde a primeira aula.</p>
+                    <div class="hero-buttons">
+                        <a href="https://clinguas.com/marcar/" target="_blank" class="btn btn-white">
+                            <span class="material-icons" style="font-size: 20px;">rocket_launch</span>
+                            Quero Começar Agora
+                        </a>
+                        <a href="https://clinguas.com/marcar/" target="_blank" class="btn btn-secondary" style="color: white; border-color: white;">
+                            <span class="material-icons" style="font-size: 20px;">event</span>
+                            Fazer Aula-Teste Grátis
+                        </a>
+                    </div>
+                    <div class="hero-info">
+                        <i class="fab fa-whatsapp" style="font-size: 18px;"></i>
+                        <span>1500 MT / mês · Sem taxa de inscrição · <a href="https://wa.me/message/45BMDRVL2TARI1" target="_blank" style="text-decoration: underline;">WhatsApp +258 84 686 1051</a></span>
+                    </div>
+                </div>
+                <div class="hero-card">
+                    <h3>
+                        <span class="material-icons">schedule</span>
+                        Você escolhe a sua hora
+                    </h3>
+                    <div class="time">21:00</div>
+                    <p>A mesma hora, todos os dias de aula.<br>Horários disponíveis até às 23h</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="bg-secondary">
+        <div class="container">
+            <div class="section-header">
+                <h2>O problema que conhecemos bem</h2>
+                <p>Sei que tentar melhorar o seu inglês com uma agenda cheia é difícil. Se algo disto soa familiar, você não está sozinho:</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-card">
+                    <i class="material-icons">error_outline</i>
+                    <p>Já se inscreveu num curso e desistiu porque o horário não encaixava na rotina de trabalho.</p>
+                </div>
+                <div class="problem-card">
+                    <i class="material-icons">error_outline</i>
+                    <p>Mesmo depois de meses de aulas, ainda trava numa reunião ou entrevista em inglês.</p>
+                </div>
+                <div class="problem-card">
+                    <i class="material-icons">error_outline</i>
+                    <p>Sente vergonha de falar por achar que vai "soar errado".</p>
+                </div>
+                <div class="problem-card">
+                    <i class="material-icons">error_outline</i>
+                    <p>Já tentou aprender sozinho, mas sem estrutura o progresso não acontece.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="curso">
+        <div class="container">
+            <div class="section-header">
+                <h2>Aulas feitas para quem trabalha ou estuda</h2>
+                <p>Turmas pequenas, horário fixo escolhido por você, e um método 100% prático onde fala inglês desde o primeiro dia.</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">groups</span>
+                    </div>
+                    <h3>Turmas Pequenas</h3>
+                    <p>4 a 6 estudantes no seu nível para que todos tenham tempo para falar</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">access_time</span>
+                    </div>
+                    <h3>Horário Flexível</h3>
+                    <p>Escolha o melhor horário para você, inclusive até às 23h</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">chat</span>
+                    </div>
+                    <h3>100% Prático</h3>
+                    <p>Fale inglês desde o primeiro dia com situações reais do dia a dia</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <span class="material-icons">feedback</span>
+                    </div>
+                    <h3>Feedback em Tempo Real</h3>
+                    <p>Correção imediata para você evoluir mais rápido</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Steps Section -->
+    <section class="bg-secondary">
+        <div class="container">
+            <div class="section-header">
+                <h2>Como funciona</h2>
+                <p>Do primeiro nivelamento à primeira conversa fluida — aqui está o caminho</p>
+            </div>
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number">1</div>
+                    <h4>Descubra o seu nível</h4>
+                    <p>Aula-teste de nivelamento gratuita</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">2</div>
+                    <h4>Escolha o horário</h4>
+                    <p>De preferência pós-laboral — até às 23h</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">3</div>
+                    <h4>Entre na turma</h4>
+                    <p>Grupos pequenos no seu nível</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">4</div>
+                    <h4>Fale desde o dia 1</h4>
+                    <p>Método centrado no aluno</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-number">5</div>
+                    <h4>Evolua com acompanhamento</h4>
+                    <p>Feedback e guias de auto-estudo</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="sobre">
+        <div class="container">
+            <div class="section-header">
+                <h2>Quem ensina</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-image">
+                    <img src="fidel-720px.png" alt="Fidel Livino Pedro - Fundador do Clube de Línguas">
+                </div>
+                <div class="about-content">
+                    <h3>Fidel Livino Pedro</h3>
+                    <div class="role">Fundador · Clube de Línguas, SU, Lda.</div>
+                    <p>Professor de Inglês e Português para Estrangeiros, tradutor e intérprete, com mais de 5 anos de experiência — incluindo colaborações com organizações internacionais de renome.</p>
+                    <p>Já vi muitos profissionais talentosos — engenheiros, geólogos, técnicos, geógrafos — perderem oportunidades não por falta de competência técnica, mas por não conseguirem comunicar com confiança em inglês.</p>
+                    <p>Foi por isso que criei o Clube de Línguas: não mais um curso cheio de gramática sem contexto, mas um espaço onde você fala desde a primeira aula, num horário que respeita a sua rotina.</p>
+                    <div class="tags">
+                        <span class="tag">KOFIH</span>
+                        <span class="tag">CAFAC — Comissão Africana de Aviação Civil</span>
+                        <span class="tag">Ministério da Saúde</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="depoimentos" class="bg-secondary">
+        <div class="container">
+            <div class="section-header">
+                <h2>O que dizem os nossos alunos</h2>
+                <p>Resultados reais de profissionais que transformaram o seu inglês</p>
+            </div>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <p>"Este curso deu-me mais confiança no meu inglês falado e, graças a isso, consegui fazer uma entrevista em inglês e passar."</p>
+                    <div class="testimonial-author">João</div>
+                    <div class="testimonial-role">Licenciado em Geologia, nível 2</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Tinha muitas dificuldades em entender pessoas de diferentes origens. Com as aulas, tem sido cada vez mais fácil interagir com colegas."</p>
+                    <div class="testimonial-author">Kátia</div>
+                    <div class="testimonial-role">Engenheira, nível 2</div>
+                </div>
+                <div class="testimonial-card">
+                    <p>"Agora sinto-me muito mais à vontade do que quando comecei. Consigo entender e responder a muitas situações."</p>
+                    <div class="testimonial-author">Sergio</div>
+                    <div class="testimonial-role">Técnico Ambiental, nível 2</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="precos">
+        <div class="container">
+            <div class="section-header">
+                <h2>Investimento</h2>
+                <p>Sem taxa de inscrição ou matrícula</p>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Mensalidade</h3>
+                    <div class="pricing-amount">1500 MT <span class="pricing-period">/ mês</span></div>
+                </div>
+                <div class="pricing-body">
+                    <ul class="pricing-features">
+                        <li>
+                            <i class="material-icons">check_circle</i>
+                            <span>4 aulas por semana (segunda a quinta), 50 min cada</span>
+                        </li>
+                        <li>
+                            <i class="material-icons">check_circle</i>
+                            <span>Turmas pequenas: 4–6 estudantes</span>
+                        </li>
+                        <li>
+                            <i class="material-icons">check_circle</i>
+                            <span>Material de estudo gratuito</span>
+                        </li>
+                        <li>
+                            <i class="material-icons">check_circle</i>
+                            <span>Feedback ao vivo em cada aula</span>
+                        </li>
+                        <li>
+                            <i class="material-icons">check_circle</i>
+                            <span>Áudios de falantes nativos</span>
+                        </li>
+                        <li>
+                            <i class="material-icons">check_circle</i>
+                            <span>English Speaking Club no WhatsApp</span>
+                        </li>
+                        <li>
+                            <i class="material-icons">check_circle</i>
+                            <span>Aulas via Zoom ou Google Meet</span>
+                        </li>
+                    </ul>
+                    <div style="text-align: center;">
+                        <a href="https://clinguas.com/marcar/" target="_blank" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 16px;">
+                            <span class="material-icons" style="font-size: 22px;">verified</span>
+                            Quero Garantir a Minha Vaga
+                        </a>
+                    </div>
+                    <div class="pricing-footer">
+                        <p class="pricing-note">Não há reembolsos — mas você tem direito a uma aula-teste gratuita antes de decidir.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>Pronto(a) para falar inglês com confiança, mesmo com a agenda cheia?</h2>
+                <p>Escolha o seu horário, faça o pagamento da primeira mensalidade e comece esta semana.</p>
+                <div class="cta-buttons">
+                    <a href="https://clinguas.com/marcar/" target="_blank" class="btn btn-white">
+                        <span class="material-icons" style="font-size: 20px;">calendar_today</span>
+                        Quero escolher o meu horário
+                    </a>
+                    <a href="https://clinguas.com/marcar/" target="_blank" class="btn btn-secondary" style="color: white; border-color: white;">
+                        <span class="material-icons" style="font-size: 20px;">quiz</span>
+                        Vou testar o meu nível grátis
+                    </a>
+                </div>
+                <div style="margin-top: 24px; display: flex; align-items: center; justify-content: center; gap: 8px;">
+                    <i class="fab fa-whatsapp" style="font-size: 24px; color: #25D366;"></i>
+                    <a href="https://wa.me/message/45BMDRVL2TARI1" target="_blank" style="color: #25D366; font-weight: 600; font-size: 16px; text-decoration: underline;">WhatsApp +258 84 686 1051</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-about">
+                    <div class="footer-logo">
+                        <img src="oficial.png" alt="Clube de Línguas Logo">
+                        <span class="footer-logo-text">Clube de Línguas</span>
+                    </div>
+                    <p>Aulas de inglês online para profissionais moçambicanos. Turmas pequenas, horários flexíveis e método prático focado em comunicação real.</p>
+                    <a href="https://wa.me/message/45BMDRVL2TARI1" target="_blank" class="footer-contact">
+                        <i class="fab fa-whatsapp" style="font-size: 20px;"></i>
+                        <span>+258 84 686 1051</span>
+                    </a>
+                </div>
+                <div class="footer-links">
+                    <h4>Serviços</h4>
+                    <ul>
+                        <li><a href="https://wa.me/message/45BMDRVL2TARI1">Inglês Online</a></li>
+                        <li><a href="https://wa.me/message/45BMDRVL2TARI1">Mandarim</a></li>
+                        <li><a href="https://wa.me/message/45BMDRVL2TARI1">Português para Estrangeiros</a></li>
+                        <li><a href="https://wa.me/message/45BMDRVL2TARI1">Tradução & Interpretação</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Clube de Línguas, SU, Lda. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
