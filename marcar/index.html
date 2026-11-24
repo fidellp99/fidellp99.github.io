@@ -996,6 +996,7 @@ src="https://www.facebook.com/tr?id=1167825945759552&ev=PageView&noscript=1"
 
         // Só chega aqui quando o Apps Script confirma a marcação.
         bookingSuccess(result, studentName);
+        fbq('track', 'Schedule');
 
       } catch (error) {
         bookingFailure(error);
